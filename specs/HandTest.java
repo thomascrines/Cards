@@ -13,8 +13,8 @@ public class HandTest {
   public void before(){
     deck = new Deck();
     hand = new Hand();
-    aceOfClubs = new Card(RankType.ACE, SuitType.CLUBS);
-    kingOfSpades = new Card(RankType.KING, SuitType.SPADES);
+    aceOfClubs = new Card(RankType.ACE, SuitType.CLUBS, 11);
+    kingOfSpades = new Card(RankType.KING, SuitType.SPADES, 10);
     hand.addCard(aceOfClubs);
     hand.addCard(kingOfSpades);
   }
@@ -28,7 +28,6 @@ public class HandTest {
 
   @Test
     public void canRestoreCard(){
-      hand.addCard(aceOfClubs);
       Card card = hand.returnCard();
       Card original = (Card) card;
       assertEquals("ace of clubs", original.nameAsString());
@@ -36,8 +35,6 @@ public class HandTest {
 
     @Test
       public void canRestoreHand(){
-        hand.addCard(aceOfClubs);
-        hand.addCard(kingOfSpades);
         Card card1 = hand.returnCard();
         Card original1 = (Card) card1;
         Card card2 = hand.returnCard();
@@ -45,5 +42,10 @@ public class HandTest {
         assertEquals("king of spades", original1.nameAsString());
         assertEquals("ace of clubs", original2.nameAsString());
       }
+
+      // @Test
+      // public void canReturnCardValue() {
+      //   assertEquals(11, hand.returnCardValue());
+      // }
 
 }

@@ -13,9 +13,9 @@ public class PlayerTest {
   @Before 
   public void before(){
     player1 = new Player("Hulk Hogan", new Hand());
-    aceOfClubs = new Card(RankType.ACE, SuitType.CLUBS);
-    kingOfSpades = new Card(RankType.KING, SuitType.SPADES);
-    kingOfHearts = new Card(RankType.KING, SuitType.HEARTS);
+    aceOfClubs = new Card(RankType.ACE, SuitType.CLUBS, 11);
+    kingOfSpades = new Card(RankType.KING, SuitType.SPADES, 10);
+    kingOfHearts = new Card(RankType.KING, SuitType.HEARTS, 10);
   }
 
   @Test

@@ -9,8 +9,8 @@ public class CardTest {
   
   @Before 
   public void before(){
-    card1 = new Card(RankType.ACE, SuitType.SPADES);
-    card2 = new Card(RankType.KING, SuitType.SPADES);
+    card1 = new Card(RankType.ACE, SuitType.SPADES, 11);
+    card2 = new Card(RankType.KING, SuitType.SPADES, 10);
   }
 
   @Test

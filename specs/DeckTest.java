@@ -11,8 +11,8 @@ public class DeckTest {
   @Before 
   public void before(){
     deck = new Deck();
-    aceOfClubs = new Card(RankType.ACE, SuitType.CLUBS);
-    kingOfSpades = new Card(RankType.KING, SuitType.SPADES);
+    aceOfClubs = new Card(RankType.ACE, SuitType.CLUBS, 11);
+    kingOfSpades = new Card(RankType.KING, SuitType.SPADES, 10);
   }
 
   @Test

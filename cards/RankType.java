@@ -16,9 +16,14 @@ public enum RankType {
   KING(13)
   ;
  
-  private int cardValue;
+  private int value;
  
-  private RankType (int cardValue) {
-    this.cardValue = cardValue;
+  private RankType (int value) {
+    this.value = value;
   }
+
+  public int getValue() {
+    return value;
+  }
+
 }

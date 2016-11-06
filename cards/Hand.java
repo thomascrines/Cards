@@ -25,4 +25,11 @@ public class Hand {
     return null;
   }
 
+  public int returnCardValue() {
+      Card card = hand.remove(0);
+      Card original = (Card) card;
+      return original.returnValue();
+    }
+
+
 }
